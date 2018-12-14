@@ -28,4 +28,9 @@ class CountryRepository extends EntryRepository implements CountryRepositoryInte
     {
         return $this->model->where('iso_3166_2', $abbr)->first();
     }
+
+    public function getAll()
+    {
+        return $this->model->all();
+    }
 }
